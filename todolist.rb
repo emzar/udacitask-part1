@@ -48,4 +48,8 @@ class Item
         @description = item_description
         @completed_status = false
     end
+
+    def completed?
+        return @completed_status
+    end
 end
