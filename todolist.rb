@@ -10,6 +10,27 @@ class TodoList
         item = Item.new(new_item)
         @items.push(item)
     end
+
+    def print_items
+        print_divider
+        puts @title
+        print_divider
+        @items.each_index do |index|
+            print_item(index)
+        end
+    end
+
+    private
+
+    def print_divider
+        puts "-------------"
+    end
+
+    def print_item(index)
+        item = @items[index]
+        print "#{index + 1} - #{item.description}".ljust(20)
+        puts "Completed: #{item.completed_status}"
+    end
 end
 
 class Item
