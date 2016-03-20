@@ -5,6 +5,11 @@ class TodoList
         @title = list_title
         @items = Array.new
     end
+
+    def add_item(new_item)
+        item = Item.new(new_item)
+        @items.push(item)
+    end
 end
 
 class Item
