@@ -18,6 +18,10 @@ class TodoList
         @items.each_index { |index| print_item(index) }
     end
 
+    def delete_item_at(index)
+        @items.delete_at(index)
+    end
+
     private
 
     def print_divider

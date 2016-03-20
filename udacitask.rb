@@ -11,14 +11,21 @@ todolist.add_item("Go dancing!")
 
 # Print the list
 todolist.print_items
+puts
 
 # Delete the first item
+todolist.delete_item_at(0)
 
 # Print the list
+todolist.print_items
+puts
 
 # Delete the second item
+todolist.delete_item_at(1)
 
 # Print the list
+todolist.print_items
+puts
 
 # Update the completion status of the first item to complete
 
