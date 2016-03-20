@@ -16,10 +16,15 @@ class TodoList
         puts @title
         print_divider
         @items.each_index { |index| print_item(index) }
+        puts
     end
 
     def delete_item_at(index)
         @items.delete_at(index)
+    end
+
+    def change_item_status(index)
+        @items[index].completed_status = !@items[index].completed_status
     end
 
     private
@@ -36,7 +41,8 @@ class TodoList
 end
 
 class Item
-    attr_reader :description, :completed_status
+    attr_reader :description
+    attr_accessor :completed_status
 
     def initialize(item_description)
         @description = item_description
