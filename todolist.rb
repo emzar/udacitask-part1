@@ -34,9 +34,7 @@ class TodoList
     end
 
     def print_item(index)
-        item = @items[index]
-        print "#{index + 1} - #{item.description}".ljust(20)
-        puts "Completed: #{item.completed_status}"
+        @items[index].with_index_print(index + 1)
     end
 end
 
@@ -51,5 +49,10 @@ class Item
 
     def completed?
         return @completed_status
+    end
+
+    def with_index_print(index)
+        print "#{index} - #{@description}".ljust(20)
+        puts "Completed: #{@completed_status}"
     end
 end
