@@ -15,9 +15,7 @@ class TodoList
         print_divider
         puts @title
         print_divider
-        @items.each_index do |index|
-            print_item(index)
-        end
+        @items.each_index { |index| print_item(index) }
     end
 
     private
