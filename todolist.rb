@@ -1,5 +1,5 @@
 class TodoList
-    attr_reader :title, :items
+    attr_accessor :title
 
     def initialize(list_title)
         @title = list_title

@@ -31,5 +31,7 @@ todolist.change_item_status(0)
 todolist.print_items
 
 # Update the title of the list
+todolist.title = "New cool TODO list"
 
 # Print the list
+todolist.print_items
