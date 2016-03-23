@@ -2,9 +2,11 @@ require 'date'
 
 class TodoList
   attr_accessor :title
+  attr_reader :owner
 
-  def initialize(list_title)
+  def initialize(list_title, owner)
     @title = list_title
+    @owner = owner
     @items = []
   end
 
@@ -15,7 +17,7 @@ class TodoList
 
   def print_items
     print_divider
-    puts @title
+    puts "#{@title}, owner: #{@owner}"
     print_divider
     @items.each_index { |index| print_item(index) }
     puts

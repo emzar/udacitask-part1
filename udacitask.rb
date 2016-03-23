@@ -1,7 +1,7 @@
 require_relative 'todolist.rb'
 
 # Creates a new todo list
-todolist = TodoList.new("Julia's Stuff")
+todolist = TodoList.new("Julia's Stuff", 'Julia')
 
 # Add four new items
 tommorow = Time.now.to_date.next
