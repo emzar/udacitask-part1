@@ -27,6 +27,16 @@ class TodoList
     @items[index].completed_status = !@items[index].completed_status
   end
 
+  def dump(output_file)
+    file = File.open(output_file, 'w')
+    file.puts(Marshal.dump(self))
+    file.close
+  end
+
+  def self.load(input_file)
+    Marshal.load(File.read(input_file))
+  end
+
   private
 
   def print_divider

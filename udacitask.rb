@@ -35,3 +35,9 @@ todolist.title = 'New cool TODO list'
 
 # Print the list
 todolist.print_items
+
+# Save in file
+todolist.dump('todolist.dat')
+
+# Load from file and print items
+TodoList.load('todolist.dat').print_items
