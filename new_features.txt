@@ -1,0 +1,3 @@
+- saving to/loading from file;
+- todolist item due date;
+- todolist owner.
