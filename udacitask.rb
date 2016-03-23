@@ -4,10 +4,11 @@ require_relative 'todolist.rb'
 todolist = TodoList.new("Julia's Stuff")
 
 # Add four new items
-todolist.add_item('Do laundry')
-todolist.add_item('Feed the cat')
-todolist.add_item('Buy cereal')
-todolist.add_item('Go dancing!')
+tommorow = Time.now.to_date.next
+todolist.add_item('Do laundry', tommorow)
+todolist.add_item('Feed the cat', tommorow)
+todolist.add_item('Buy cereal', tommorow)
+todolist.add_item('Go dancing!', tommorow)
 
 # Print the list
 todolist.print_items

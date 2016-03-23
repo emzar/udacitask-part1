@@ -1,3 +1,5 @@
+require 'date'
+
 class TodoList
   attr_accessor :title
 
@@ -6,8 +8,8 @@ class TodoList
     @items = []
   end
 
-  def add_item(new_item)
-    item = Item.new(new_item)
+  def add_item(desc, due_date)
+    item = Item.new(desc, due_date)
     @items.push(item)
   end
 
@@ -51,10 +53,12 @@ end
 class Item
   attr_reader :description
   attr_accessor :completed_status
+  attr_reader :due_date
 
-  def initialize(item_description)
+  def initialize(item_description, due_date)
     @description = item_description
     @completed_status = false
+    @due_date = due_date
   end
 
   def completed?
@@ -63,6 +67,7 @@ class Item
 
   def with_index_print(index)
     print "#{index} - #{@description}".ljust(20)
-    puts "Completed: #{@completed_status}"
+    print "Completed: #{@completed_status}".ljust(20)
+    puts "Due date: #{@due_date}"
   end
 end
